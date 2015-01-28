@@ -15,7 +15,15 @@
 	e.加入log4j插件log4e(講解log4j)
 	
 第3课(建立MAVEN工程，配置spring3) 
-
+	a.pom.xml加入struts2 jar
+	b.copy struts.xml -> src/main/resources(說明struts.xml內配置)
+	c.配置web.xml
+	d.使用annotation方式create Action
+	  create sy.action.UserAction
+	e.推薦動態方法調用
+	f.測試UserAction內使用UserServiceImpl
+	  以WebApplicationContextUtils取得ApplicationContext
+	  以@Autowired方式
 
 第4课(配置struts2，整合spring3+struts2)		
 第5课(配置hibernate4，整合ssh)
