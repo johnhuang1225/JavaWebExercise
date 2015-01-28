@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.851" errors="0" skipped="0" tests="1" name="sy.test.TestSpring">
+<testsuite failures="0" time="1.554" errors="0" skipped="0" tests="1" name="sy.test.TestSpring">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\MyEclipse2014\binary\com.sun.java.jdk7.win32.x86_64_1.7.0.u45\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\GitHub\JavaWebExercise\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2838691568670512836.tmp"/>
+    <property name="classworlds.conf" value="D:\GitHub\JavaWebExercise\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf457276600984001843.tmp"/>
     <property name="sun.jnu.encoding" value="MS950"/>
     <property name="java.library.path" value="C:\MyEclipse2014\binary\com.sun.java.jdk7.win32.x86_64_1.7.0.u45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Oracle\VirtualBox;C:\HashiCorp\Vagrant\bin;C:\ProgramData\Oracle\Java\javapath;C:\app\a0801\product\11.2.0\dbhome_1\bin;C:\Python32;C:\Python32\Tools\Scripts;C:\apache-maven-3.1.1\bin;C:\gradle-1.8\bin;C:\Progra~1\Java\jdk1.6.0_45\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Dell\Dell Data Protection\Access\Advanced\Wave\Gemalto\Access Client\v5\;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\QuickTime\QTSystem\;C:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\AppServ\Apache2.2\bin;C:\AppServ\php5;C:\AppServ\MySQL\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.776" classname="sy.test.TestSpring" name="test"/>
+  <testcase time="1.469" classname="sy.test.TestSpring" name="test"/>
 </testsuite>

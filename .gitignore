@@ -15,6 +15,7 @@ local.properties
 .settings/
 .loadpath
 RemoteSystemsTempFiles
+target/
 
 # External tool builders
 .externalToolBuilders/

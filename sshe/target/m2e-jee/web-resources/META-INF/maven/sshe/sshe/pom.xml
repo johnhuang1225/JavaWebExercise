@@ -32,7 +32,33 @@
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
-		
+
+		<!-- struts -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.3.4</version>
+			<!-- 若整合hibernate，需排除此jar -->
+			<!--  
+			<exclusions>
+				<exclusion>
+					<groupId>javassist</groupId>
+					<artifactId>javassist</artifactId>
+				</exclusion>
+			</exclusions>
+			-->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>2.3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+			<version>2.3.4</version>
+		</dependency>
+				
 		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>

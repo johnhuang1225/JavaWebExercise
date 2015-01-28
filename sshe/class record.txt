@@ -1,4 +1,5 @@
 第1课(课前准备，工具的下载、环境变量的配置和软件的破解等)
+
 第2课(技术选型，数据库建立，myeclipse生成hibernate文件等)
 	a.myeclipse調優
 	b.新建maven
@@ -10,8 +11,12 @@
   		web配置方式
     		1.web.xml加入<context-param>
     		2.web.xml指定一個監聽器
+		create sy.service.UserServiceI,sy.service.UserServiceImpl
 	e.加入log4j插件log4e(講解log4j)
+	
 第3课(建立MAVEN工程，配置spring3) 
+
+
 第4课(配置struts2，整合spring3+struts2)		
 第5课(配置hibernate4，整合ssh)
 第6课(搭建easyui项目，引入相关JS，文件顺序，编写首页面，讲解layout组件和form组件，讲解validatebox组件，讲解dialog，利用dialog编写注册页面)
