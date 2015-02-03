@@ -1,14 +1,15 @@
 package sy.action;
 
+import java.util.Date;
+import java.util.UUID;
+
 import org.apache.log4j.Logger;
-import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import sy.model.Tuser;
 import sy.service.UserServiceI;
 
 @ParentPackage("basePackage")
@@ -33,6 +34,17 @@ public class UserAction {
 //		ApplicationContext ac =
 //				WebApplicationContextUtils.getWebApplicationContext(ServletActionContext.getServletContext());
 //		UserServiceI userService = (UserServiceI)ac.getBean("userService");
+		
 		userService.save();
+	}
+	
+	
+	public void addUser(){
+		Tuser t = new Tuser();
+		t.setId(UUID.randomUUID().toString());
+		t.setName("john");
+		t.setPwd("john");
+		t.setCreatedatetime(new Date());
+		userService.save(t);
 	}
 }

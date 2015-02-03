@@ -1,31 +1,39 @@
 第1课(课前准备，工具的下载、环境变量的配置和软件的破解等)
 
 第2课(技术选型，数据库建立，myeclipse生成hibernate文件等)
-	a.myeclipse調優
-	b.新建maven
-	c.導入spring
-		複製config-properties,log4j.properties,spring.xml
-	d.spring:
-  		annotation方式
-  		application配置方式
-  		web配置方式
-    		1.web.xml加入<context-param>
-    		2.web.xml指定一個監聽器
-		create sy.service.UserServiceI,sy.service.UserServiceImpl
-	e.加入log4j插件log4e(講解log4j)
+    a.create ORACLE sshe tablespace,sshe user,TUSER table
+        >create tablespace sshe datafile 'c:\xxx\xxx\sshe.dbf' size 10m autoextend on;
+        TUSE ID varchar(36),NAME varchar(100),PWD varchar(36),CREATEDATETIME date,MODIFYDATETIME date
+        注意:必須設定Primary Key
+    b.調正myeclipse layout(23:00)
+    c.myeclipse生成hbm和類
+      1.開啟MyEclipse Database Explorer設定資料庫連線
+      2.新增web project(無須maven):HibernateGenerator
+      3.專案上右鍵->MyEclipse->Project Facets[Capabilities]
+        choose hibernate4.*
+      4.開啟MyEclipse Database Explorer展開看到table，右鍵Hibernate Reverse Engineering
+        choose create POJO , Java Data Object(POJO<>DB Table)-> next -> id Generator:assigned , 下面四個全選 -> next -> Include referenced tables(A->B)(A<-B)兩個都選
+      5.若資料庫為oracle，產生出的entity會有schema="SSHE"，建議改為schema=""
+        若為空時，通過url連接，用戶名是什麼，schema自動填上此用戶名
 	
 第3课(建立MAVEN工程，配置spring3) 
-	a.pom.xml加入struts2 jar
-	b.copy struts.xml -> src/main/resources(說明struts.xml內配置)
-	c.配置web.xml
-	d.使用annotation方式create Action
-	  create sy.action.UserAction
-	e.推薦動態方法調用
-	f.測試UserAction內使用UserServiceImpl
-	  以WebApplicationContextUtils取得ApplicationContext
-	  以@Autowired方式
+    a.myeclipse調優
+    b.新建maven
+    c.導入spring
+        複製config-properties,log4j.properties,spring.xml
+    d.spring:
+        annotation方式
+        application配置方式
+        web配置方式
+        1.web.xml加入<context-param>
+        2.web.xml指定一個監聽器
+        create sy.service.UserServiceI,sy.service.UserServiceImpl
+    e.加入log4j插件log4e(講解log4j)
 
-第4课(配置struts2，整合spring3+struts2)		
+第4课(配置struts2，整合spring3+struts2)	
+
+
+	
 第5课(配置hibernate4，整合ssh)
 第6课(搭建easyui项目，引入相关JS，文件顺序，编写首页面，讲解layout组件和form组件，讲解validatebox组件，讲解dialog，利用dialog编写注册页面)
 第7课(详解easyui的form组件。注册用户详解)   
