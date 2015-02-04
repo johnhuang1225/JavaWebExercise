@@ -31,10 +31,40 @@
     e.加入log4j插件log4e(講解log4j)
 
 第4课(配置struts2，整合spring3+struts2)	
+    a.pom.xml加入struts2 jar
+    b.copy struts.xml -> src/main/resources(說明struts.xml內配置)
+    c.配置web.xml
+    d.使用annotation方式create Action
+      create sy.action.UserAction
+    e.推薦動態方法調用
+    f.測試UserAction內使用UserServiceImpl
+        以WebApplicationContextUtils取得ApplicationContext
+        以@Autowired方式
 
-
-	
 第5课(配置hibernate4，整合ssh)
+    datasource:dpcp,c3p0,alibaba
+    a.pom.xml導入hibernate jar
+    b.copy spring-hibernate.xml
+        講解spring-hibernate.xml內配置
+        要使用hibernate首先要有datasource
+        交易管理配置在service層
+        註解方式配置事務：在每個service class上寫@Transactional(class內所有方法都會應用事務)
+    c.create UserDaoI,UserDaoImpl,Tuser
+      in UserDaoImpl @Autowired SessionFactory
+      UserDao加上@Repository("userDao")註解(如此才歸Spring管理)
+    d.pom.xml導入aspectjweaver,alibaba datasource
+    e.MAVEN 導入oracle jar 需另外處理
+	f.web項目使用Hibernate
+	  1.web.xml
+		  <context-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring.xml,classpath:spring-hibernate.xml</param-value>
+		  </context-param>
+	  2.web.xml
+		openSessionInView配置(先不配置)
+	  3.Maven install會出錯，補上Maven插件
+	g.測試http://localhost:8080/sshe/userAction!addUser.action插入資料
+
 第6课(搭建easyui项目，引入相关JS，文件顺序，编写首页面，讲解layout组件和form组件，讲解validatebox组件，讲解dialog，利用dialog编写注册页面)
 第7课(详解easyui的form组件。注册用户详解)   
 第8课(重构一下后台代码，让代码看起来更加整洁，讲解Struts2的模型驱动模式，加入JSTL标签，重构页面，使页面功能分离)

@@ -1,16 +1,21 @@
 package sy.test;
 
-import java.util.Date;
-import java.util.UUID;
+import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import sy.model.Tuser;
+import sy.pageModel.Dept;
+import sy.service.DeptServiceI;
 import sy.service.UserServiceI;
 
 public class TestSpring {
+	/**
+	 * Logger for this class
+	 */
+	private static final Logger logger = Logger.getLogger(TestSpring.class);
 
 	@Test
 	public void test() {
@@ -24,4 +29,12 @@ public class TestSpring {
 //		t.setCreatedatetime(new Date());
 //		userService.save(t);
 	}
+	
+	@Test
+	public void testDept(){
+		ApplicationContext ac = new ClassPathXmlApplicationContext(new String[] { "classpath:spring.xml", "classpath:spring-hibernate.xml" });
+		DeptServiceI deptService = (DeptServiceI) ac.getBean("deptService");
+		List<Dept> result = deptService.getTreeNode(null);
+	}
+	
 }

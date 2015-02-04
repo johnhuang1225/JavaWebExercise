@@ -10,22 +10,6 @@ import sy.dao.UserDaoI;
 import sy.model.Tuser;
 
 @Repository("userDao")
-public class UserDaoImpl implements UserDaoI {
-
-	private SessionFactory sessionFactory;
-
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
-
-	@Autowired
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
-
-	@Override
-	public Serializable save(Tuser t) {
-		return this.sessionFactory.getCurrentSession().save(t);
-	}
+public class UserDaoImpl extends BaseDaoImpl<Tuser> implements UserDaoI {
 
 }

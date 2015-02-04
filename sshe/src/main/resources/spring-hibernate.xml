@@ -101,8 +101,9 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 			<tx:method name="remove*" />
 			<tx:method name="repair" />
 			<tx:method name="deleteAndRepair" />
-
-			<tx:method name="get*" propagation="SUPPORTS" />
+			<tx:method name="get*"/><!-- John add for JUnit test get*-->
+			
+			<!--  <tx:method name="get*" propagation="SUPPORTS" />-->
 			<tx:method name="find*" propagation="SUPPORTS" />
 			<tx:method name="load*" propagation="SUPPORTS" />
 			<tx:method name="search*" propagation="SUPPORTS" />

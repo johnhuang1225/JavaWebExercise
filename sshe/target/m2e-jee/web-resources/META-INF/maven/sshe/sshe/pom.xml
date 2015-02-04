@@ -12,6 +12,12 @@
   
   <dependencies>
 
+		<!-- fastJson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.24</version>
+		</dependency>
 		<!-- oracle資料庫driver -->
 		<dependency>
 			<groupId>com.oracle</groupId>

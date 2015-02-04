@@ -15,7 +15,7 @@ import javax.persistence.UniqueConstraint;
 @Entity
 @Table(name = "TUSER"
 		, schema = "SSHE"
-		, uniqueConstraints = @UniqueConstraint(columnNames = "NAME"))
+		)
 public class Tuser implements java.io.Serializable {
 
 	// Fields    
